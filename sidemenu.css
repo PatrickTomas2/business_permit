@@ -1,0 +1,129 @@
+.nav-pills li a:hover{
+    background-color: white;
+}
+
+:root{
+    --main-color: #FAD602;
+}
+
+.nav-pills li a:hover span,
+    .nav-pills li a:hover i {
+        color: black;
+}
+
+.sidebar-main{
+    background-color: var(--main-color);
+}
+
+.sidebar{
+    background-color: var(--main-color);
+}
+    .container {
+        margin-top: 20px;
+    }
+    
+    .input-box {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+    .input-field {
+        margin-bottom: 15px;
+    }
+    
+    .input-field label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .input-field input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    #content-placeholder {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    
+    .submit {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .submit:hover {
+        background-color: #45a049;
+    }
+    
+    .fixed-size-container {
+        max-width: 100%;
+        width: 100%;
+        margin: auto;
+        border-radius: 5px;
+    }
+    
+    .text-left {
+        text-align: left;
+    }
+    
+    .bg-light {
+        background-color: #f8f9fa;
+    }
+
+    .edit-link{
+        text-decoration: none;
+        color: var(--main-color);
+    }
+    
+    .edit-text-icon-gap{
+        margin-left: 5px;
+    }
+
+    .edit-link:hover{
+        text-decoration: underline;
+        color: var(--main-color);
+    }
+
+    .profile-button{
+        width: 400px;
+        background-color: rgba(255, 255, 0, 0.5);
+        color: black;
+    }
+
+    .profile-button:hover{
+        width: 400px;
+        background-color: var(--main-color);
+        color: white;
+    }
+    
+    .add-business-link{
+        text-decoration: none;
+        color: var(--main-color);
+    }
+
+    .register-business-btn-custom{
+        background-color: rgba(255, 255, 0, 0.5);
+        color: black;
+    }
+
+    .register-business-btn-custom:hover{
+        background-color: var(--main-color);
+        color: white;
+    }
+
+    .logout-btn{
+        background-color: rgba(255, 255, 0, 0.5);
+        color: black;
+    }
+
+    .logout-btn:hover{
+        background-color: var(--main-color);
+        color: white;
+    }
