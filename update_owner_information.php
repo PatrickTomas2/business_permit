@@ -15,7 +15,7 @@
     $contactNumber = $_POST['contactNumber'];
 
 
-    $query = "UPDATE owner_information SET owner_fname`='$fname',owner_mname`='$mname',`owner_lname`='$lname',`owner_address`='$address',`owner_contactNumber`='$contactNumber' WHERE owner_id='$user_id'";
+    $query = "UPDATE owner_information SET owner_fname ='$fname', owner_mname = '$mname', owner_lname='$lname', owner_address ='$address',owner_contactNumber='$contactNumber' WHERE owner_id='$user_id'";
     $update_user_info = mysqli_query($conn, $query);
 
     if ($update_user_info) {

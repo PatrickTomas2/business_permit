@@ -61,7 +61,7 @@
                             <input type="text" class="form-control" id="mname" placeholder="Middle name" value="<?=$mname?>" readonly>
                         </div>
                         <div class="col-md-4">
-                            <label class="labels">Surname</label>
+                            <label class="labels">Last name</label>
                             <input type="text" class="form-control" id="lname" value="<?=$lname?>" placeholder="Surname" readonly>
                         </div>
                     </div>

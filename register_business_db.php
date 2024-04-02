@@ -14,12 +14,13 @@
     $businessType = $_POST['businessType'];
     $businessEmail = $_POST['businessEmail'];
     $businessNumber = $_POST['businessNumber'];
+    $businessTin = $_POST['businessTin'];
     
     $businessID = uniqid();
     $user_id = $_SESSION['user_id'];
 
 
-    $query = "INSERT INTO business_registration VALUES('$businessID', '$user_id', '$businessName', '$businessHouseNumber', '$businessBarangay', '$businessZone',  '$businessType', '$businessNumber', '$businessEmail', NOW())";
+    $query = "INSERT INTO business_registration VALUES('$businessID', '$user_id', '$businessName', '$businessHouseNumber', '$businessBarangay', '$businessZone',  '$businessType', '$businessNumber', '$businessEmail','$businessTin', NOW())";
     
     $insert_owner = mysqli_query($conn, $query);
     
