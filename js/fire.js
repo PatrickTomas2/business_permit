@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    showFireRequirements();
+    showInspection();
 });
 
 function showFireRequirements(){
@@ -8,4 +8,8 @@ function showFireRequirements(){
 
 function showRequest(){
     $('#content-placeholder').load('content-fire/request.php');
+}
+
+function showInspection(){
+    $('#content-placeholder').load('content-fire/schedule.php');
 }

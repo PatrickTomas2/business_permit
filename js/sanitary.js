@@ -9,3 +9,7 @@ function showSanitaryRequirements(){
 function showRequest(){
     $('#content-placeholder').load('content-sanitary/request.php');
 }
+
+function showInspection(){
+    $('#content-placeholder').load('content-sanitary/schedule.php');
+}

@@ -35,7 +35,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./sidemenu.css?ver=0002">
     <script src="js/jquery-3.3.1.js?ver001"></script>
-    <script src="js/fire.js?ver=002"></script>
+    <script src="js/fire.js?ver=004"></script>
 
     <title>This is home</title>
 </head>
@@ -48,11 +48,6 @@
                     <span class="fs-2 d-none d-sm-inline fw-bold">FIRE SAFETY OWNER</span>
                 </a>
                 <ul class="nav nav-pills flex-column mt-4">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white" onclick="showFireRequirements()">
-                            <i class="fs-5 fa fa-list-check"></i><span class="fs-4 ms-3 d-none d-sm-inline">Checklist</span>
-                        </a>
-                    </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white" onclick="showInspection()">
                             <i class="fs-5 fa fa-magnifying-glass"></i><span class="fs-4 ms-3 d-none d-sm-inline">Inspection Schedules</span>

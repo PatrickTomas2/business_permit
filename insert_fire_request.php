@@ -31,7 +31,7 @@
         $business_id = $row['business_id'];
     }
 
-    $query_two = "INSERT INTO fire_inspection_request VALUES ('$request_id','$business_id','$user_id','$representative','$business_nature', $total_floor, $storey, '0', NOW(), NOW())";
+    $query_two = "INSERT INTO fire_inspection_request VALUES ('$request_id','$business_id','$user_id','$representative','$business_nature', $total_floor, $storey, '0', NOW(), '0', NOW())";
     $insert_request = mysqli_query($conn, $query_two);
     if ($insert_request) {
         echo "Request submitted successfully";

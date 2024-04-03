@@ -36,7 +36,7 @@
         $business_id = $row['business_id'];
     }
 
-    $query_two = "INSERT INTO sanitary_inspection_request VALUES ('$request_id', '$business_id', '$user_id', '$sanitary_representative','$sanitary_facility', '$isServeFood', '$food_service', $sanitary_total_floor, $sanitary_storey, '0', NOW(), NOW())";
+    $query_two = "INSERT INTO sanitary_inspection_request VALUES ('$request_id', '$business_id', '$user_id', '$sanitary_representative','$sanitary_facility', '$isServeFood', '$food_service', $sanitary_total_floor, $sanitary_storey, '0', NOW(), '0', NOW())";
     $insert_request = mysqli_query($conn, $query_two);
     if ($insert_request) {
         echo "Request submitted successfully";

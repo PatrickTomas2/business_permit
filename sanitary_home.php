@@ -29,7 +29,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./sidemenu.css?ver=0002">
     <script src="js/jquery-3.3.1.js?ver=001"></script>
-    <script src="js/sanitary.js?ver=003"></script>
+    <script src="js/sanitary.js?ver=004"></script>
 
     <title>This is sanitary home</title>
 </head>

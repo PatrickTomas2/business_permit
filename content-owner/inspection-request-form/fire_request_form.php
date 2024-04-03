@@ -32,7 +32,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.3.1.js?ver=001"></script>
-    <script src="js/inspection.js?ver=002"></script>
+    <script src="js/inspection.js?ver=003"></script>
     <style>
         :root{
             --main-color: #FAD602;
@@ -66,13 +66,14 @@
 <body>
 
 <?php
-    $query_two = "SELECT COUNT(business_registration.business_name) AS count, fire_inspection_request.isAccepted, fire_inspection_request.inspection_schedule FROM business_registration INNER JOIN fire_inspection_request ON business_registration.business_id = fire_inspection_request.business_id WHERE business_registration.business_name = '$business_name'";
+    $query_two = "SELECT COUNT(business_registration.business_name) AS count, fire_inspection_request.isAccepted, fire_inspection_request.isDone, fire_inspection_request.inspection_schedule FROM business_registration INNER JOIN fire_inspection_request ON business_registration.business_id = fire_inspection_request.business_id WHERE business_registration.business_name = '$business_name'";
     $status = mysqli_query($conn, $query_two);
     if (mysqli_num_rows($status) > 0) {
       $row = mysqli_fetch_assoc($status);
 
       $count = $row['count'];
       $isAccepted = $row['isAccepted'];
+      $isDone = $row['isDone'];
       $schedule = $row['inspection_schedule'];
 
 
@@ -154,9 +155,9 @@
   <button data-mdb-ripple-init type="button" class="btn btn-block mb-4 custom-btn-request" onclick="insertFireRequest()">Submit</button>
 </div>
 <?php
-      }else if($count == 1 && $isAccepted == 0){
+      }else if($count == 1 && $isAccepted == 0 && $isDone == 0){
         echo "<p>Wait for the approval and your schedule.</p>";
-      }else if($count == 1 && $isAccepted == 1){
+      }else if($count == 1 && $isAccepted == 1 && $isDone == 0){
 ?>
 <div class="card">
   <div class="card-body">
@@ -166,6 +167,8 @@
 </div>
 
 <?php
+      }else{
+        echo "<p>Your inspection is DONE. Get your Fire Safety Inspection Certificate tommorow on our office. Please bring additional documents and payment.</p>";
       }
     }
 ?>

@@ -32,6 +32,7 @@ function acceptRequest(business_name){
         business_name : business_name,
     }, function (data, status){
         // alert(data);
+        window.location.href = 'fire_home.php';
         showRequestList();
     })
 }
