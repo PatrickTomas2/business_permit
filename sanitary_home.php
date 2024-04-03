@@ -42,14 +42,14 @@
                     <span class="fs-2 d-none d-sm-inline fw-bold">SANITARY INSPECTION OWNER</span>
                 </a>
                 <ul class="nav nav-pills flex-column mt-4">
-                    <li class="nav-item py-2 py-sm-0">
+                    <!-- <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white" onclick="showsSanitaryChecklist()">
                             <i class="fs-5 fa fa-list-check"></i><span class="fs-4 ms-3 d-none d-sm-inline">Checklist</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white" onclick="showInspection()">
-                            <i class="fs-5 fa fa-magnifying-glass"></i><span class="fs-4 ms-3 d-none d-sm-inline">Request for inspection</span>
+                            <i class="fs-5 fa fa-calendar"></i><span class="fs-4 ms-3 d-none d-sm-inline">Inspection schedules</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">

@@ -50,7 +50,7 @@
                 <ul class="nav nav-pills flex-column mt-4">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white" onclick="showInspection()">
-                            <i class="fs-5 fa fa-magnifying-glass"></i><span class="fs-4 ms-3 d-none d-sm-inline">Inspection Schedules</span>
+                            <i class="fs-5 fa fa-calendar"></i><span class="fs-4 ms-3 d-none d-sm-inline">Inspection Schedules</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">

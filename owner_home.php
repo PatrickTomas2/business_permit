@@ -30,7 +30,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/9c6f27a8d7.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="./sidemenu.css?ver=002">
+    <link rel="stylesheet" href="./sidemenu.css?ver=005">
     <script src="js/jquery-3.3.1.js?ver=001"></script>
     <script src="js/owner_home_page.js?ver=002"></script>
     <title>Home page</title>
@@ -60,7 +60,7 @@
                             <i class="fs-5 fa fa-file"></i><span class="fs-4 ms-3 d-none d-sm-inline">Apply for business permit</span>
                         </a>
                     </li>
-                    <li class="nav-item py-2 py-sm-0">
+                    <!-- <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white" onclick="showNotification()">
                             <i class="fs-5 fa fa-bell"></i><span class="fs-4 ms-3 d-none d-sm-inline">Notification</span>
                         </a>
@@ -69,7 +69,7 @@
                         <a href="#" class="nav-link text-white" onclick="showRenewal()">
                             <i class="fs-5 fa fa-rotate-right"></i><span class="fs-4 ms-3 d-none d-sm-inline">Renewal</span>
                         </a>
-                    </li>
+                    </li> -->
                     
                 </ul>
                 

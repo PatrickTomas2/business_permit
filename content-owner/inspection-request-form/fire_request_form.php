@@ -130,8 +130,8 @@
 
 
   <div data-mdb-input-init class="form-outline mb-4">
-    <label class="form-label" for="business_nature">Type of occupancy/business nature</label>
-    <input type="text" class="form-control" id="business_nature" placeholder="Enter type of occupancy/tusiness nature" onfocusout="inputValidation('#business_nature')"/>
+    <label class="form-label" for="business_nature">Type of facility (e.g. Restaurant, Food Truck, cafe, etc.)</label>
+    <input type="text" class="form-control" id="business_nature" placeholder="Enter type of facility" onfocusout="inputValidation('#business_nature')"/>
   </div>
 
 

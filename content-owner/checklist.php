@@ -28,10 +28,6 @@ if ($checkbox_states) {
     $requirement6_checked = $checkbox_states['requirement6'] ? 'checked' : '';
     $requirement7_checked = $checkbox_states['requirement7'] ? 'checked' : '';
     $requirement8_checked = $checkbox_states['requirement8'] ? 'checked' : '';
-    $requirement9_checked = $checkbox_states['requirement9'] ? 'checked' : '';
-    $requirement10_checked = $checkbox_states['requirement10'] ? 'checked' : '';
-    $requirement11_checked = $checkbox_states['requirement11'] ? 'checked' : '';
-    $requirement12_checked = $checkbox_states['requirement12'] ? 'checked' : '';
 } else {
     $requirement1_checked = '';
     $requirement2_checked = '';
@@ -41,11 +37,6 @@ if ($checkbox_states) {
     $requirement6_checked = '';
     $requirement7_checked = '';
     $requirement8_checked = '';
-    $requirement9_checked = '';
-    $requirement10_checked = '';
-    $requirement11_checked = '';
-    $requirement12_checked = '';
-
 }
 
 }
@@ -59,7 +50,7 @@ if ($checkbox_states) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Business Requirements Checklist</title>
-    <link rel="stylesheet" href="content-owner/checklist.css?ver=001">
+    <link rel="stylesheet" href="content-owner/checklist.css?ver=004">
     
 </head>
 <body>
@@ -76,14 +67,10 @@ if ($checkbox_states) {
         <li><input type="checkbox"><label for="">2x2 PICTURE</label></li>
         <li><input type="checkbox"><label for="">BRGY CLEARANCE FROM RESIDENCE</label></li>
         <li><input type="checkbox"><label for="">BRGY RECOMMENDATION (PLACE OF BUSINESS)</label></li>
-        <li><input type="checkbox"><label for="">DTI (Sole Proprietor) Economic Office</label></li>
-        <li><input type="checkbox"><label for="">SEC (Partnership / Corporation)</label></li>
         <li><input type="checkbox"><label for="">ZONING CERTIFICATE</label></li>
         <li><input type="checkbox"><label for="">SANITARY PERMIT</label></li>
         <li><input type="checkbox"><label for="">FIRE PERMIT</label></li>
         <li><input type="checkbox"><label for="">CEDULA</label></li>
-        <li><input type="checkbox"><label for="">HEALTH CERTIFICATE (Food Handler/Barbershops)</label></li>
-        <li><input type="checkbox"><label for="">BOOK OF ACCOUNTS (for Renewal)</label></li>
         <li><input type="checkbox"><label for="">APPLICATION FORM FOR BUSINESS UNIFIED PERMIT</label></li>
     </ul>
 
@@ -99,15 +86,11 @@ if ($checkbox_states) {
         <li><input type="checkbox" id="requirement1" <?php echo $requirement1_checked; ?>><label for="requirement1">2x2 PICTURE</label></li>
         <li><input type="checkbox" id="requirement2" <?php echo $requirement2_checked; ?>><label for="requirement2">BRGY CLEARANCE FROM RESIDENCE</label></li>
         <li><input type="checkbox" id="requirement3" <?php echo $requirement3_checked; ?>><label for="requirement3">BRGY RECOMMENDATION (PLACE OF BUSINESS)</label></li>
-        <li><input type="checkbox" id="requirement4" <?php echo $requirement4_checked; ?>><label for="requirement4">DTI (Sole Proprietor) Economic Office</label></li>
-        <li><input type="checkbox" id="requirement5" <?php echo $requirement5_checked; ?>><label for="requirement5">SEC (Partnership / Corporation)</label></li>
-        <li><input type="checkbox" id="requirement6" <?php echo $requirement6_checked; ?>><label for="requirement6">ZONING CERTIFICATE</label></li>
-        <li><input type="checkbox" id="requirement7" <?php echo $requirement7_checked; ?>><label for="requirement7">SANITARY PERMIT</label></li>
-        <li><input type="checkbox" id="requirement8" <?php echo $requirement8_checked; ?>><label for="requirement8">FIRE PERMIT</label></li>
-        <li><input type="checkbox" id="requirement9" <?php echo $requirement9_checked; ?>><label for="requirement9">CEDULA</label></li>
-        <li><input type="checkbox" id="requirement10" <?php echo $requirement10_checked; ?>><label for="requirement10">HEALTH CERTIFICATE (Food Handler/Barbershops)</label></li>
-        <li><input type="checkbox" id="requirement11" <?php echo $requirement11_checked; ?>><label for="requirement11">BOOK OF ACCOUNTS (for Renewal)</label></li>
-        <li><input type="checkbox" id="requirement12" <?php echo $requirement12_checked; ?>><label for="requirement12">APPLICATION FORM FOR BUSINESS UNIFIED PERMIT</label></li>
+        <li><input type="checkbox" id="requirement4" <?php echo $requirement4_checked; ?>><label for="requirement4">ZONING CERTIFICATE</label></li>
+        <li><input type="checkbox" id="requirement5" <?php echo $requirement5_checked; ?>><label for="requirement5">SANITARY PERMIT</label></li>
+        <li><input type="checkbox" id="requirement6" <?php echo $requirement6_checked; ?>><label for="requirement6">FIRE PERMIT</label></li>
+        <li><input type="checkbox" id="requirement7" <?php echo $requirement7_checked; ?>><label for="requirement7">CEDULA</label></li>
+        <li><input type="checkbox" id="requirement8" <?php echo $requirement8_checked; ?>><label for="requirement8">APPLICATION FORM FOR BUSINESS UNIFIED PERMIT</label></li>
     </ul>
 
     <br> 

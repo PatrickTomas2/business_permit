@@ -37,9 +37,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../sidemenu.css?ver=005">
+    <link rel="stylesheet" href="../sidemenu.css?ver=007">
     <script src="js/jquery-3.3.1.js?ver=001"></script>
-    <script src="js/profile.js?ver=005"></script>
+    <script src="js/profile.js?ver=007"></script>
     <title>Profile</title>
 </head>
 <body>
@@ -114,7 +114,7 @@
                             <input type="text" class="form-control" id="businessName" onfocusout="inputValidation('#businessName')">
                         </div>
                         <div class="mb-3">
-                            <label for="businessHouseNumber" class="form-label">Business house number</label>
+                            <label for="businessHouseNumber" class="form-label">Lot number</label>
                             <input type="text" class="form-control" id="businessHouseNumber" onfocusout="inputValidation('#businessHouseNumber')">
                         </div>
                         <div class="mb-3">
@@ -165,10 +165,7 @@
                             <label for="businessNumber" class="form-label">Business contact number</label>
                             <input type="text" class="form-control" id="businessNumber" onfocusout="inputValidation('#businessNumber')">
                         </div>
-                        <div class="mb-3">
-                            <label for="businessTin" class="form-label">Taxpayer Identification Number (TIN)</label>
-                            <input type="text" class="form-control" id="businessTin" onfocusout="inputValidation('#businessTin')">
-                        </div>
+                        
                         <div class="text-center">
                             <button type="submit" class="btn register-business-btn-custom" onclick="registerBusiness()">Register Business</button>
                         </div>

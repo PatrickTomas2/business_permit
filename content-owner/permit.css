@@ -24,6 +24,18 @@
     text-align: center; 
 }
 
-.container{
+.box-link {
+    display: block;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+}
 
+.box-link:hover {
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
 }

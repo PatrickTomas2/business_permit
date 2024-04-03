@@ -41,22 +41,22 @@
     <div class="row">
         <div class="col">
             <label for="">Address</label>
-            <input type="text" class="form-control" value="<?=$address?>">
+            <input type="text" class="form-control" value="<?=$address?>" readonly>
         </div>
         <div class="col">
         <label for="">Facility Type</label>
-            <input type="text" class="form-control" value="<?=$business_nature?>">
+            <input type="text" class="form-control" value="<?=$business_nature?>" readonly>
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col">
             <label for="">Building Total Floor Area</label>
-            <input type="text" class="form-control" value="<?=$total_floor?>">
+            <input type="text" class="form-control" value="<?=$total_floor?>" readonly>
         </div>
         <div class="col">
             <label for="">Building Storey Number</label>
-            <input type="text" class="form-control" value="<?=$storey?>">
+            <input type="text" class="form-control" value="<?=$storey?>" readonly>
         </div>
     </div>
     <br>

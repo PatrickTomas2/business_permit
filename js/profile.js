@@ -70,10 +70,10 @@ function registerBusiness(){
     var businessType = $("#businessType").val();
     var businessEmail = $("#businessEmail").val();
     var businessNumber = $("#businessNumber").val();
-    var businessNumber = $("#businessTin").val();
+    
 
 
-    if (businessName == "" || businessHouseNumber == "" || businessBarangay == "" || businessZone == "" || businessType == ""|| businessEmail == "" || businessNumber == "" || businessTin == "") {
+    if (businessName == "" || businessHouseNumber == "" || businessBarangay == "" || businessZone == "" || businessType == ""|| businessEmail == "" || businessNumber == "") {
         $(".modal-error-title-holder").text("All fields is required").css("color", "red");
         return false;
     }
@@ -89,7 +89,7 @@ function registerBusiness(){
         var businessType = $('#businessType').val();
         var businessEmail = $('#businessEmail').val();
         var businessNumber = $('#businessNumber').val();
-        var businessTin = $('#businessTin').val();
+        
     
         $.post('register_business_db.php', {
             businessName: businessName,
@@ -99,7 +99,7 @@ function registerBusiness(){
             businessType: businessType,
             businessEmail: businessEmail,
             businessNumber: businessNumber,
-            businessTin: businessTin,
+            
         }, function (data, status) {
             // alert(data + " " + status);
             Swal.fire({
