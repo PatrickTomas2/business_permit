@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $isChecked = $_POST['isChecked'];
 
     // Update the database with unchecked values for all checkboxes
-    $update_query = "UPDATE owner_checklist SET requirement1 = '$isChecked', requirement2 = '$isChecked', requirement3 = '$isChecked', requirement4 = '$isChecked', requirement5 = '$isChecked', requirement6 = '$isChecked', requirement7 = '$isChecked', requirement8 = '$isChecked', requirement9 = '$isChecked', requirement10 = '$isChecked', requirement11 = '$isChecked', requirement12 = '$isChecked' WHERE owner_id = '$user_id' AND business_name = '$business_name'";
+    $update_query = "UPDATE owner_checklist SET requirement1 = '$isChecked', requirement2 = '$isChecked', requirement3 = '$isChecked', requirement4 = '$isChecked', requirement5 = '$isChecked', requirement6 = '$isChecked', requirement7 = '$isChecked' WHERE owner_id = '$user_id' AND business_name = '$business_name'";
     $result = mysqli_query($conn, $update_query);
 
     if ($result) {

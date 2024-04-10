@@ -74,7 +74,7 @@
   <div class="container">
     <div class="row gy-5 gy-lg-0 align-items-lg-center">
       <div class="col-12 col-lg-6">
-        <img class="img-fluid rounded" loading="lazy" src="/assets/images/faq-img-1.png" alt="How can we help you?">
+        <img class="img-fluid rounded" loading="lazy" src="assets/images/faq-img-1.png" alt="How can we help you?">
       </div>
       <div class="col-12 col-lg-6">
         <div class="row justify-content-xl-end">

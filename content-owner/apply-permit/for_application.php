@@ -51,12 +51,34 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script src="js/jquery-3.3.1.js?ver=001"></script>
-    <script src="js/apply_permit.js?ver=006"></script>
+    <script src="js/apply_permit.js?ver=007"></script>
     <title>Register</title>
     <style>
         .back-button{
             background-color: red;
         }
+        .error{
+            color: red;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .file_input {
+            height: 100px;
+            width: auto;
+            border-radius: 6px;
+            border: 1px dashed #999;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+        .file_input:hover {
+            color: #de0611;
+            border: 1px dashed #de0611;
+        }
+        
     </style>
 </head>
 <body>
@@ -75,10 +97,10 @@
                         
                             <div class="col-2" style="text-align: right;">
                                 <input class="form-check-input" type="checkbox" id="recordTrue">
+                                <span class="error_recordTrue"></span>
                             </div>
                             <div class="col-6">
                                 <label class="form-check-label" for="recordTrue">
-                                    
                                     I declare under penalty of perjury that the information provided herein is true to the best of my knowledge and based on authentic records. Furthermore, I agree to adhere to any regulatory requirements and address any deficiencies within 30 days from the issuance of the business permit.
                                 </label>
                             </div>
@@ -90,17 +112,18 @@
                         
                             <div class="col-2" style="text-align: right;">
                                 <input class="form-check-input" type="checkbox" id="terms">
+                                <span class="error_terms"></span>
                             </div>
                             <div class="col-6">
                                 <label class="form-check-label" for="terms">
-                                By accepting these terms and conditions, you agree that [Your Business Name] will adhere to the provisions outlined in Republic Act No. 10173, also known as the Data Privacy Act. This Act is designed to safeguard all types of information, whether private, personal, or sensitive, and applies to both individuals and entities involved in the processing of personal data.
+                                By accepting these terms and conditions, you agree that [<b><?=$businessName?></b>] will adhere to the provisions outlined in Republic Act No. 10173, also known as the Data Privacy Act. This Act is designed to safeguard all types of information, whether private, personal, or sensitive, and applies to both individuals and entities involved in the processing of personal data.
                                 </label>
                             </div>
                             <div class="col-2"></div>
                         </div>
                     </div>
 
-                    <div class="get-info">
+                    <div class="get-info mb-3">
                         <h3>ADD THE REQUIREMENTS <?=$user_business?></h3>
 
                         
@@ -108,44 +131,130 @@
                         *Please fill in the necessary information below so we can assist you better. Your input is important for us to provide the right support. Thank you!
                         </i></p>
                     <form id="postForm" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="req1" class="form-label fw-bold">Select 2x2 picture</label>
-                            <input type="file" class="form-control" id="req1" name="req1">
+                        <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button id="req1_btn" class="accordion-button custom-btn text-danger fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                2x2 PICTURE <span id="req1_error" class="error"></span>
+                                    <i class="bi bi-chevron-down ml-auto"></i> <!-- Bootstrap icon for toggling -->
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="req1" class="file_input">Upload 2x2 picture</label>
+                                        <input type="file" id="req1" name="req1" onchange="displayFileName(this, 'req1')" required>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="req2" class="form-label fw-bold">Cedula</label>
-                            <input type="file" class="form-control" id="req2" name="req2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button id="req2_btn" class="accordion-button custom-btn text-danger fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                BRGY CLEARANCE FROM RESIDENCE <span id="req2_error" class="error"></span>
+                                    <i class="bi bi-chevron-down ml-auto"></i> <!-- Bootstrap icon for toggling -->
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="req2" class="file_input">Upload barangay clearance</label>
+                                        <input type="file" id="req2" name="req2" onchange="displayFileName(this, 'req2')" required>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="req3" class="form-label fw-bold">Select barangay clearance</label>
-                            <input type="file" class="form-control" id="req3" name="req3">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button id="req3_btn" class="accordion-button custom-btn text-danger fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                BRGY RECOMMENDATION <span id="req3_error" class="error"></span>
+                                    <i class="bi bi-chevron-down ml-auto"></i> <!-- Bootstrap icon for toggling -->
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="req3" class="file_input">Upload barangay recommendation</label>
+                                        <input type="file" id="req3" name="req3" onchange="displayFileName(this, 'req3')" required>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="req4" class="form-label fw-bold">Select barangay recommendation</label>
-                            <input type="file" class="form-control" id="req4" name="req4">
+                        <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button id="req4_btn" class="accordion-button custom-btn text-danger fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        ZONING CERTIFICATE<span id="req4_error" class="error"></span>
+                            <i class="bi bi-chevron-down ml-auto"></i> <!-- Bootstrap icon for toggling -->
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <label for="req4" class="file_input">Upload 2x2 picture </label>
+                                <input type="file" id="req4" name="req4" onchange="displayFileName(this, 'req4')" required>
+                            </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="mb-3">
-                            <label for="req5" class="form-label fw-bold">Select zoning certificate</label>
-                            <input type="file" class="form-control" id="req5" name="req5">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button id="req5_btn" class="accordion-button custom-btn text-danger fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        SANITARY PERMIT<span id="req5_error" class="error"></span>
+                            <i class="bi bi-chevron-down ml-auto"></i> <!-- Bootstrap icon for toggling -->
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <label for="req5" class="file_input">Upload sanitary permit </label>
+                                <input type="file" id="req5" name="req5" onchange="displayFileName(this, 'req5')" required>
+                            </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="mb-3">
-                            <label for="req6" class="form-label fw-bold">Select Sanitary Safety Inspection Permit</label>
-                            <input type="file" class="form-control" id="req6" name="req6">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button id="req6_btn" class="accordion-button custom-btn text-danger fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            FIRE SAFETY INSPECTION PERMIT<span id="req6_error" class="error"></span>
+                            <i class="bi bi-chevron-down ml-auto"></i> <!-- Bootstrap icon for toggling -->
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <label for="req6" class="file_input">Upload fire safety inspection permit</label>
+                                <input type="file" id="req6" name="req6" onchange="displayFileName(this, 'req6')" required>
+                            </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="mb-3">
-                            <label for="req7" class="form-label fw-bold">Select Fire Safety Inspection Permit</label>
-                            <input type="file" class="form-control" id="req7" name="req7">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button id="req7_btn" class="accordion-button custom-btn text-danger fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            SANITARY SAFETY INSPECTION PERMIT<span id="req7_error" class="error"></span>
+                            <i class="bi bi-chevron-down ml-auto"></i> <!-- Bootstrap icon for toggling -->
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="mb-3">
+                                <label for="req7" class="file_input">Upload sanitary safety inspection permit</label>
+                                <input type="file" id="req7" name="req7" onchange="displayFileName(this, 'req7')" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                         </div>
                     </div> <!-- end ng get-requirements -->
                     <div class="button-submit" style="text-align: center;">
                             <div class="input-field">
-                                <button type="button" class="submit" onclick="SubmitRequirement('<?=$business_id?>')">Submit</button>
+                                <button type="button" class="submit" onclick="checkTermsAndSubmit('<?=$business_id?>')">Submit</button>
                             </div>
                     </div>
                     </form>

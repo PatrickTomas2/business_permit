@@ -19,6 +19,14 @@
     $user_id = $_SESSION['user_id'];
     $username = $_SESSION['username'];
 
+    $select_user_info = mysqli_query($conn, "SELECT * FROM owner_information INNER JOIN business_registration ON owner_information.owner_id = business_registration.owner_id WHERE owner_information.owner_id='$user_id' AND business_registration.business_name ='$user_business'");
+    if (mysqli_num_rows($select_user_info) > 0) {
+        while ($row = mysqli_fetch_assoc($select_user_info)) {
+            $business_id = $row['business_id'];
+        }
+    }
+    
+
 ?>
 
 
@@ -29,7 +37,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="js/jquery-3.3.1.js?ver=001"></script>
-    <script src="js/apply_permit.js?ver=001"></script>
+    <script src="js/apply_permit.js?ver=003"></script>
 </head>
 <body>
 <div class="container">
@@ -43,7 +51,7 @@
                     <h5 class="card-title">Business Permit Application</h5>
                     <p class="card-text">Get a business permit to ensure legal compliance and protect your business from potential penalties or closures.</p>
                     <center>
-                    <button class="btn btn-primary" onclick="showApplicationForm('<?=$user_business?>')">Application</button>
+                    <button class="btn btn-primary" onclick="showApplicationForm('<?=$business_id?>')">Application</button>
                     </center>
                     <!-- <a href="#" class="btn btn-primary"></a> -->
                 </div>

@@ -81,7 +81,7 @@ if (!empty($_FILES['req7']['name'])) {
 // Output destination paths for debugging
 // echo $destination1 . " " . $destination2 . " " . $destination3 . " " . $destination4 . " " . $destination5 . " " . $destination6 . " " . $destination7;
 
-$queryChecklist = "INSERT INTO business_permit_request VALUES('$permit_id', '$user_id', '$business_id', '$destination1', '$destination2', '$destination3', '$destination4', '$destination5', '$destination6', '$destination7', NOW())";
+$queryChecklist = "INSERT INTO business_permit_request VALUES('$permit_id', '$user_id', '$business_id', '$destination1', '$destination2', '$destination3', '$destination4', '$destination5', '$destination6', '$destination7', '0', NOW())";
 
 $insert_checklist = mysqli_query($conn, $queryChecklist);
 
