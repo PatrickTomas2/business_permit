@@ -1,23 +1,27 @@
-.nav-pills li a:hover{
-    background-color: white;
-}
+    .nav-pills li a:hover{
+        background-color: white;
+    }
 
-:root{
-    --main-color: #FAD602;
-}
+    :root{
+        --main-color: white;
+    }
 
-.nav-pills li a:hover span,
-    .nav-pills li a:hover i {
+    .nav-pills li a:hover span,
+        .nav-pills li a:hover i {
+            color: black;
+            font-weight: bold;
+    }
+
+    .sidebar-main{
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .sidebar{
+        background-color: white;
         color: black;
-}
-
-.sidebar-main{
-    background-color: var(--main-color);
-}
-
-.sidebar{
-    background-color: var(--main-color);
-}
+    }
+    
     .container {
         margin-top: 20px;
     }
@@ -79,7 +83,7 @@
 
     .edit-link{
         text-decoration: none;
-        color: var(--main-color);
+        color: black;
     }
     
     .edit-text-icon-gap{
@@ -88,7 +92,8 @@
 
     .edit-link:hover{
         text-decoration: underline;
-        color: var(--main-color);
+        color: black;
+        font-weight: bold;
     }
 
     .profile-button{

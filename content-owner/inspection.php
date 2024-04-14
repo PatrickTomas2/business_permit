@@ -37,8 +37,8 @@
     }else {
 ?>
 <div class="container">
-    <h2>Request for inspection here: <?=$user_business?></h2>
-    <p>To get fire safety inspection certificate, sanitary inspection certificate, electrical inspection certificate, and building inspection certificate, request now.</p><br><br>
+    <h3>Request for inspection here: <?=$user_business?></h3>
+    <p>Request now to get <strong>Fire Safety Inspection Certificate</strong> and <strong>Sanitary Inspection Certificate</strong>.</p><br><br>
     <div class="row justify-content-center">
         <div class="col">
             <div class="card" style="width: 18rem;">

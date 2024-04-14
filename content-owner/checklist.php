@@ -59,7 +59,7 @@ if ($checkbox_states) {
     if ($message == "Register a business now.") {
 ?>
 <div class="container">
-        <h1>Business Requirements Checklist</h1>
+        <h3>Business Requirements Checklist</h3><br>
         <p><span class="fw-bold">Note:</span> <em><?= $message ?></em></p>
 
         
@@ -80,7 +80,7 @@ if ($checkbox_states) {
     }else {
 ?>
 <div class="container">
-        <h1>Business Requirements Checklist</h1>
+        <h3>Business Requirements Checklist</h3><br>
         
     <ul>
         <li><input type="checkbox" id="requirement1" <?php echo $requirement1_checked; ?>><label for="requirement1">2x2 PICTURE</label></li>

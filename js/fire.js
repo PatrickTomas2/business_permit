@@ -1,6 +1,10 @@
 $(document).ready(function() {
-    showInspection();
+    showHome();
 });
+
+function showHome(){
+    $('#content-placeholder').load('content-fire/fire_dashboard.php');
+}
 
 function showFireRequirements(){
     $('#content-placeholder').load('content-fire/checklist.php');
@@ -12,4 +16,8 @@ function showRequest(){
 
 function showInspection(){
     $('#content-placeholder').load('content-fire/schedule.php');
+}
+
+function showInspected(){
+    $('#content-placeholder').load('content-fire/inspected.php');
 }

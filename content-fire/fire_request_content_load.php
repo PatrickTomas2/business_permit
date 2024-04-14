@@ -19,8 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .card-custom-style {
-            width: 90%; 
-            height: auto;
+            width: 100%;
         }
     </style>
 </head>

@@ -37,7 +37,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../sidemenu.css?ver=007">
+    <link rel="stylesheet" href="../sidemenu.css?ver=008">
     <script src="js/jquery-3.3.1.js?ver=001"></script>
     <script src="js/profile.js?ver=007"></script>
     <title>Profile</title>
