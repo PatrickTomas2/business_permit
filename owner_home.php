@@ -91,8 +91,6 @@
                     <div class="text-right">
                         <h1 class="text-black p-3">Santo Tomas Business Permit System</h1>
                     </div>
-                    
-                    <br><br>
                 <div id="content-placeholder" class="fixed-size-container p-3 text-left bg-white">
                 </div>
             </div>

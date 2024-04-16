@@ -10,7 +10,7 @@
     $user_id = $_SESSION['user_id'];
     $username = $_SESSION['username'];
 
-    $query = "SELECT COUNT(request_id) AS count FROM fire_inspection_request WHERE MONTH(request_date_time) = 4";
+    $query = "SELECT COUNT(request_id) AS count FROM sanitary_inspection_request WHERE MONTH(request_date_time) = 4";
     $select_count_april = mysqli_query($conn, $query);
     if (mysqli_num_rows($select_count_april) > 0) {
         $row = mysqli_fetch_assoc($select_count_april);
@@ -18,7 +18,7 @@
         $april = $row['count'];
     }
 
-    $query_two = "SELECT COUNT(request_id) AS count FROM fire_inspection_request WHERE MONTH(request_date_time) = 3";
+    $query_two = "SELECT COUNT(request_id) AS count FROM sanitary_inspection_request WHERE MONTH(request_date_time) = 3";
     $select_count_march = mysqli_query($conn, $query_two);
     if (mysqli_num_rows($select_count_march) > 0) {
         $row = mysqli_fetch_assoc($select_count_march);
@@ -26,7 +26,7 @@
         $march = $row['count'];
     }
 
-    $query_three = "SELECT COUNT(request_id) AS count FROM fire_inspection_request WHERE MONTH(request_date_time) = 2";
+    $query_three = "SELECT COUNT(request_id) AS count FROM sanitary_inspection_request WHERE MONTH(request_date_time) = 2";
     $select_count_feb = mysqli_query($conn, $query_three);
     if (mysqli_num_rows($select_count_feb) > 0) {
         $row = mysqli_fetch_assoc($select_count_feb);
@@ -34,28 +34,28 @@
         $february = $row['count'];
     }
 
-    $count_today_sched = mysqli_query($conn, "SELECT COUNT(request_id) AS sched_today FROM fire_inspection_request WHERE isAccepted = '1' AND isDone = '0' AND DATE(inspection_schedule) = CURDATE();");
+    $count_today_sched = mysqli_query($conn, "SELECT COUNT(request_id) AS sched_today FROM sanitary_inspection_request WHERE isAccepted = '1' AND isDone = '0' AND DATE(inspection_schedule) = CURDATE();");
     if (mysqli_num_rows($count_today_sched) > 0) {
       $row = mysqli_fetch_assoc($count_today_sched);
       
       $sched_today_count = $row['sched_today'];
     }
 
-    $count_completed = mysqli_query($conn, "SELECT COUNT(request_id) AS completed FROM fire_inspection_request WHERE isAccepted = '1' AND isDone = '1'");
+    $count_completed = mysqli_query($conn, "SELECT COUNT(request_id) AS completed FROM sanitary_inspection_request WHERE isAccepted = '1' AND isDone = '1'");
     if (mysqli_num_rows($count_completed) > 0) {
       $row = mysqli_fetch_assoc($count_completed);
       
       $completed = $row['completed'];
     }
 
-    $count_pending = mysqli_query($conn, "SELECT COUNT(request_id) AS pending FROM fire_inspection_request WHERE isAccepted = '0' AND isDone = '0'");
+    $count_pending = mysqli_query($conn, "SELECT COUNT(request_id) AS pending FROM sanitary_inspection_request WHERE isAccepted = '0' AND isDone = '0'");
     if (mysqli_num_rows($count_pending) > 0) {
       $row = mysqli_fetch_assoc($count_pending);
       
       $pending = $row['pending'];
     }
 
-    $count_upcoming_sched = mysqli_query($conn, "SELECT COUNT(request_id) AS upcoming_schedules FROM fire_inspection_request WHERE isAccepted = '1' AND isDone = '0' AND DATE(inspection_schedule) > CURDATE()");
+    $count_upcoming_sched = mysqli_query($conn, "SELECT COUNT(request_id) AS upcoming_schedules FROM sanitary_inspection_request WHERE isAccepted = '1' AND isDone = '0' AND DATE(inspection_schedule) > CURDATE()");
     if (mysqli_num_rows($count_upcoming_sched) > 0) {
       $row = mysqli_fetch_assoc($count_upcoming_sched);
       
@@ -70,7 +70,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.3.1.js?ver001"></script>
-    <script src="js/fire_dashboard.js?ver=001"></script>
+    <script src="js/fire_dashboard.js?ver=002"></script>
     <style>
       .card {
         height: 100%;
@@ -124,7 +124,7 @@ $(document).ready(function() {
         labels: ["November", "December", "January", "February", "March", "April"],
         datasets: [{
             label: "Monhty Request",
-            data: [5, 10, 2, february, march, april],
+            data: [5, 7, 2, 4, 5, april],
             backgroundColor: [
               'rgba(105, 0, 132, .2)',
             ],

@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    showSanitaryRequirements();
+    showHome();
 });
 
-function showSanitaryRequirements(){
-    $('#content-placeholder').load('content-sanitary/checklist.php');
+function showHome(){
+    $('#content-placeholder').load('content-sanitary/sanitary_dashboard.php');
 }
 
 function showRequest(){
@@ -12,4 +12,8 @@ function showRequest(){
 
 function showInspection(){
     $('#content-placeholder').load('content-sanitary/schedule.php');
+}
+
+function showInspected(){
+    $('#content-placeholder').load('content-sanitary/inspected.php');
 }

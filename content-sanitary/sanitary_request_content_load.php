@@ -26,7 +26,7 @@
 </head>
 <body>
 <?php
-    $query = "SELECT business_registration.business_name FROM business_registration INNER JOIN sanitary_inspection_request ON business_registration.business_id = sanitary_inspection_request.business_id WHERE sanitary_inspection_request.isAccepted = '0'";
+    $query = "SELECT business_registration.business_name FROM business_registration INNER JOIN sanitary_inspection_request ON business_registration.business_id = sanitary_inspection_request.business_id WHERE sanitary_inspection_request.isAccepted = '0' ORDER BY sanitary_inspection_request.request_date_time DESC";
     $select_request = mysqli_query($conn, $query);
     if (mysqli_num_rows($select_request) > 0) {
         while ($row = mysqli_fetch_assoc($select_request)) {
@@ -37,7 +37,7 @@
         <div class="card-body">
             <a href="#" style="text-decoration: none; color: black;" onclick="infoHolder('<?=$business_name?>')">
             <p class="fw-bold fs-4 ms-5 d-flex justify-content-between align-items-center"><?=$business_name?>
-            <span><button class="btn btn-info m-3" style="height: 50px; width: 100px;" id="businessModalLink" data-bs-toggle="modal" data-bs-target="#businessModal">Accept</button>
+            <span><button class="btn btn-info m-3" style="height: 50px; width: 100px;" id="businessModalLink" data-bs-toggle="modal" data-bs-target="#businessModal" onclick="setBusiness('<?=$business_name?>')">Accept</button>
             </span></p></a>
             <div class="m-5" id="<?= str_replace(' ', '-', $business_name) ?>-info-holder"></div>
         </div>
@@ -58,7 +58,7 @@
                         </div>
                         <br>
                         <div class="text-center">
-                            <button class="btn btn-info" onclick="acceptRequest('<?=$business_name?>')">Confirm</button>
+                            <button class="btn btn-info" onclick="acceptRequest()">Confirm</button>
                         </div>
                     </form>
                 </div>

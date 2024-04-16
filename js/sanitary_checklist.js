@@ -19,7 +19,6 @@ function checkAll() {
     console.log("Toggled IDs:", toggledIds);
 }
 
-
 var toggledIds = [];
 
 function toggleCheckbox(checkboxId) {
@@ -44,13 +43,13 @@ function toggleCheckbox(checkboxId) {
 
 
 function saveToggledIds(business_name) {
-    // alert(business_name);
+    //alert(business_name);
     var recommendation = $('#recommendation').val();
-    if (toggledIds.length < 20) {
+    if (toggledIds.length < 15) {
         alert('Required all');
         return false;
     }
-    $.post('insert-fire-checklist.php', 
+    $.post('insert-sanitary-checklist.php', 
     { 
         toggledIds: JSON.stringify(toggledIds),
         business_name : business_name,
@@ -58,7 +57,7 @@ function saveToggledIds(business_name) {
     }, function (data, status) {
         // Handle the response from the server if needed
         alert(data);
-        window.location.href = 'fire_home.php';
+        window.location.href = 'sanitary_home.php';
     });
 }
 

@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.3.1.js?ver=001"></script>
-    <script src="js/sanitary_request.js?ver=001"></script>
+    <script src="js/sanitary_request.js?ver=002"></script>
     
     <style>
     .content-holder-sanitary-request {
@@ -29,6 +29,20 @@
 </head>
 <body>
     <div class="container">
+    <div class="row">
+    <div class="col">
+            <label for="">Search by name: </label>
+            <input id="search_business_name" type="text" class="form-control" placeholder="Enter business name" onkeyup="searchRequest()">
+        </div>
+        <div class="col">
+            <label for="">Start date: </label>
+            <input type="date" id="request_start_date" class="form-control" oninput="searchRequest()">
+        </div>
+        <div class="col">
+            <label for="">End date: </label>
+            <input type="date" id="request_end_date" class="form-control" oninput="searchRequest()">
+        </div>
+    </div><br>
         <div class="content-holder-sanitary-request"></div>
     </div>
 </body>

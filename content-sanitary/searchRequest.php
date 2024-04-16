@@ -10,6 +10,19 @@
     $user_id = $_SESSION['user_id'];
     $username = $_SESSION['username'];
 
+    $filter = "";
+
+    if (isset($_GET['search_business_name'])) {
+        $search_business_name = $_GET['search_business_name'];
+        $filter .= "AND business_registration.business_name LIKE '%$search_business_name%'";
+    }
+
+    if (isset($_GET['request_start_date']) && isset($_GET['request_end_date'])) {
+        $request_start_date = $_GET['request_start_date'];
+        $request_end_date = $_GET['request_end_date'];
+
+        $filter .= "AND (sanitary_inspection_request.request_date_time BETWEEN '$request_start_date' AND '$request_end_date')";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +38,7 @@
 </head>
 <body>
 <?php
-    $query = "SELECT business_registration.business_name FROM business_registration INNER JOIN fire_inspection_request ON business_registration.business_id = fire_inspection_request.business_id WHERE fire_inspection_request.isAccepted = '0' ORDER BY fire_inspection_request.request_date_time DESC";
+    $query = "SELECT business_registration.business_name FROM business_registration INNER JOIN sanitary_inspection_request ON business_registration.business_id = sanitary_inspection_request.business_id WHERE sanitary_inspection_request.isAccepted = '0' $filter ORDER BY sanitary_inspection_request.request_date_time DESC";
     $select_request = mysqli_query($conn, $query);
     if (mysqli_num_rows($select_request) > 0) {
         while ($row = mysqli_fetch_assoc($select_request)) {
@@ -53,7 +66,7 @@
                     <form id="businessRegistrationForm" >
                         <div class="mb-3">
                             <label for="request_date">Date: </label>
-                            <input type="date" id="request_date" name="request_date" class="form-control" min="<?php echo date('Y-m-d'); ?>" required>
+                            <input type="date" id="request_date" name="request_date" class="form-control" required>
                         </div>
                         <br>
                         <div class="text-center">
@@ -70,6 +83,12 @@
         echo "<p>No available request.</p>";
     }
 ?>
+
+<script>
+  const currentDate = new Date().toISOString().split('T')[0];
+
+  document.getElementById('request_date').min = currentDate;
+</script>
 
 </body>
 </html>

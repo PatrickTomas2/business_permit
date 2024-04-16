@@ -22,7 +22,10 @@
     <h4>Upcomming inspection schedule: </h4>
     <br><br>
 <?php
-    $query = "SELECT business_registration.business_name, fire_inspection_request.isAccepted, fire_inspection_request.inspection_schedule FROM business_registration INNER JOIN fire_inspection_request ON business_registration.business_id = fire_inspection_request.business_id WHERE fire_inspection_request.isAccepted = '1' AND DATE(fire_inspection_request.inspection_schedule) <> CURDATE();";
+    $query = "SELECT business_registration.business_name, fire_inspection_request.isAccepted, fire_inspection_request.inspection_schedule
+    FROM business_registration
+    INNER JOIN fire_inspection_request ON business_registration.business_id = fire_inspection_request.business_id
+    WHERE fire_inspection_request.isAccepted = '1' AND DATE(fire_inspection_request.inspection_schedule) > CURDATE() ORDER BY fire_inspection_request.inspection_schedule ASC";
     $select_remaining_sched = mysqli_query($conn, $query);
     if (mysqli_num_rows($select_remaining_sched) > 0) {
         while ($row = mysqli_fetch_assoc($select_remaining_sched)) {
@@ -33,11 +36,11 @@
             $formatted_date = date('F j, Y', strtotime($inspection_schedule));
 
 ?>
-        <h5><?=$formatted_date?></h5>
+
         <div class="card border-0 shadow m-3 card-custom-style">
         <div class="card-body">
             <a href="#" style="text-decoration: none; color: black;" onclick="infoHolderSched('<?=$business_name?>')">
-            <p class="fw-bold fs-4 ms-5 d-flex justify-content-between align-items-center"><?=$business_name?></p></a>
+            <p class="fw-bold fs-4 ms-5 d-flex justify-content-between align-items-center"><?=$business_name?> <span class="fw-normal fs-6"><?=$formatted_date?></span></p></a>
             <div class="m-5" id="<?= str_replace(' ', '-', $business_name) ?>-info-holder-sched"></div>
         </div>
         </div>

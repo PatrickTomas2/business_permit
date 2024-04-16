@@ -20,7 +20,7 @@
 </head>
 <body>
 <?php
-    $query = "SELECT business_registration.business_name FROM business_registration INNER JOIN fire_inspection_request ON business_registration.business_id = fire_inspection_request.business_id WHERE fire_inspection_request.isDone = '1'";
+    $query = "SELECT business_registration.business_name FROM business_registration INNER JOIN sanitary_inspection_request ON business_registration.business_id = sanitary_inspection_request.business_id WHERE sanitary_inspection_request.isDone = '1'";
     $select_request = mysqli_query($conn, $query);
     if (mysqli_num_rows($select_request) > 0) {
         while ($row = mysqli_fetch_assoc($select_request)) {

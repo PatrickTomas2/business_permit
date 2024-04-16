@@ -2,52 +2,48 @@
 
 $business_name = $_GET['business_name'];
 $checklistItems = [
-  "general_exterior" => [
-    "title" => "General Building - Exterior",
-    "items" => [
-      "Is the building address clearly visible from the road with contrasting colors?",
-      "Are fire lanes clearly marked and unobstructed by parked vehicles or debris?",
-      "Is there at least one meter of clearance around fire hydrants?",
+    "general_cleanliness" => [
+        "title" => "General Cleanliness",
+        "items" => [
+            "Are all areas of the premises clean and free from dirt, dust, and debris?",
+            "Are garbage and waste properly stored and disposed of?",
+            "Are cleaning supplies stored properly and away from food and food preparation areas?",
+        ],
     ],
-  ],
-  "general_interior" => [
-    "title" => "General Building - Interior",
-    "items" => [
-      "Are all exits clearly marked and easily identifiable with proper signage?",
-      "Are exit doors unlocked during business hours and free from obstructions (curtains, furniture)?",
-      "Electrical panels free from storage",
-      "Gas cylinders properly secured",
-      "Is there a designated smoking area away from flammable materials?",
+    "pest_control" => [
+        "title" => "Pest Control",
+        "items" => [
+            "Is there evidence of pest infestation (e.g., droppings, nests) in the premises?",
+            "Are all openings to the outside (e.g., doors, windows) properly sealed to prevent pests from entering?",
+            "Is food stored in sealed containers to prevent contamination by pests?",
+        ],
     ],
-  ],
-  "fire_alarm_systems" => [
-    "title" => "Fire Alarm Systems",
-    "items" => [
-      "Is the fire alarm system in working order and tested monthly?",
-      "Has the fire alarm system been inspected and serviced by a qualified professional within the last year?",
-      "Are there documented records of all maintenance and inspections for the fire alarm system?",
+    "food_handling" => [
+        "title" => "Food Handling",
+        "items" => [
+            "Are food handlers practicing proper hygiene (e.g., washing hands, wearing gloves)?",
+            "Is food stored at the correct temperature to prevent spoilage and contamination?",
+            "Are food preparation areas clean and sanitized?",
+        ],
     ],
-  ],
-  "fire_extinguishers" => [
-    "title" => "Fire Extinguishers",
-    "items" => [
-      "Does the business have a sufficient number and type of fire extinguishers for the potential hazards present? (A minimum of a 2A10BC extinguisher is recommended)",
-      "Are all fire extinguishers fully charged and inspected monthly?",
-      "Have all fire extinguishers been serviced annually and tagged by a qualified professional?",
-      "Are fire extinguishers located within 75 feet (25 meters) of any point in the business?",
-      "Are fire extinguishers mounted at an accessible height (no higher than 1.5 meters)?",
+    "sanitary_facilities" => [
+        "title" => "Sanitary Facilities",
+        "items" => [
+            "Are there adequate handwashing facilities with soap, water, and paper towels?",
+            "Are there sufficient toilets for employees and customers, kept clean and in working order?",
+            "Are there proper facilities for storing and disposing of sanitary napkins and diapers?",
+        ],
     ],
-  ],
-  "emergency_preparedness" => [
-    "title" => "Emergency Preparedness",
-    "items" => [
-      "Does the business have a written fire safety plan outlining evacuation procedures and designated assembly points?",
-      "Have all employees been trained on the fire safety plan and evacuation procedures?",
-      "Are fire drills conducted regularly to ensure employee familiarity with the plan?",
-      "Are there clear procedures for reporting fires and contacting emergency services?",
+    "water_supply" => [
+        "title" => "Water Supply",
+        "items" => [
+            "Is the water supply safe and free from contamination?",
+            "Are there backflow prevention devices installed on all water lines connected to the public water supply?",
+            "Are water tanks and reservoirs clean and properly maintained?",
+        ],
     ],
-  ],
 ];
+
 
 ?>
 
@@ -58,8 +54,8 @@ $checklistItems = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="js/jquery-3.3.1.js?ver=001"></script>
-  <script src="js/fire_checklist.js?ver=002"></script>
-  <title>Inspection Checklist</title>
+  <script src="js/sanitary_checklist.js?ver=003"></script>
+  <title>Sanitary Inspection</title>
   <style>
     :root{
     --main-color: #FAD602;
@@ -90,7 +86,7 @@ $checklistItems = [
     textarea{
       width: 100%;
     }
-    .button-custom {
+    .button-custom{
       width: 50%;
       height: 40px;
       background-color: var(--main-color);
@@ -128,7 +124,6 @@ $checklistItems = [
 <div class="container">
   <form method="post">
     <h3><label for="business_name">Business Name:</label></h3>
-
     <input type="text" value="<?=$business_name?>" class="form-control" readonly><br>
 
     <table>
@@ -159,7 +154,6 @@ $checklistItems = [
     </div>
 </div>
 
-
     <h5>Recommendations: </h5>
     <textarea name="recomendation" id="recommendation" cols="30" rows="10"></textarea>
   </form>
@@ -168,6 +162,5 @@ $checklistItems = [
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
 </body>
 </html>

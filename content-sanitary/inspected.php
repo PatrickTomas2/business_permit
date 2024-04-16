@@ -17,14 +17,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.3.1.js?ver=001"></script>
-    <script src="js/sanitary_schedule.js?ver=001"></script>
-    <title>Document</title>
+    <script src="js/sanitary_evaluated.js?ver=001"></script>
+    
+    <style>
+    .content-holder-fire-inspected {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
 </head>
 <body>
-<div class="container">
-    <div class="content-schedule-today"></div><br>
-    <hr>
-    <br><div class="content-remaining-schedule"></div>
-</div>
+    <div class="container">
+        <div class="content-holder-fire-inspected"></div>
+    </div>
 </body>
 </html>

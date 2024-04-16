@@ -3,7 +3,7 @@
     }
 
     :root{
-        --main-color: white;
+        --main-color: black;
     }
 
     .nav-pills li a:hover span,
@@ -13,6 +13,8 @@
     }
 
     .sidebar-main{
+        min-width: 100px;
+        max-width: 310px;
         background-color: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
