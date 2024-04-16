@@ -49,38 +49,44 @@ if ($checkbox_states) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Business Requirements Checklist</title>
-    <link rel="stylesheet" href="content-owner/checklist.css?ver=004">
-    
+    <title>Business Permit Requirements Checklist</title>
+    <link rel="stylesheet" href="content-owner/checklist.css?ver=007">
+    <script src="js/jquery-3.3.1.js?ver001"></script>
+    <script src="js/checklist.js?ver=002"></script>
 </head>
+</style>
 <body>
 
 <?php
     if ($message == "Register a business now.") {
 ?>
 <div class="container">
-        <h3>Business Requirements Checklist</h3><br>
+        <h3>Business Permit Requirements Checklist</h3><br>
         <p><span class="fw-bold">Note:</span> <em><?= $message ?></em></p>
+        <p>Ensure a Smooth Application Process with the Following Requirements. </p>
+        
 
         
     <ul>
-        <li><input type="checkbox"><label for="">2x2 PICTURE</label></li>
-        <li><input type="checkbox"><label for="">BRGY CLEARANCE FROM RESIDENCE</label></li>
-        <li><input type="checkbox"><label for="">BRGY RECOMMENDATION (PLACE OF BUSINESS)</label></li>
-        <li><input type="checkbox"><label for="">ZONING CERTIFICATE</label></li>
-        <li><input type="checkbox"><label for="">SANITARY PERMIT</label></li>
-        <li><input type="checkbox"><label for="">FIRE PERMIT</label></li>
-        <li><input type="checkbox"><label for="">CEDULA</label></li>
-        <li><input type="checkbox"><label for="">APPLICATION FORM FOR BUSINESS UNIFIED PERMIT</label></li>
+        <li class ="check"><input type="checkbox"><label for="">2x2 PICTURE</label></li>
+        <li class ="check"><input type="checkbox"><label for="">BRGY CLEARANCE FROM RESIDENCE</label></li>
+        <li class ="check"><input type="checkbox"><label for="">BRGY RECOMMENDATION (PLACE OF BUSINESS)</label></li>
+        <li class ="check"><input type="checkbox"><label for="">ZONING CERTIFICATE</label></li>
+        <li class ="check"><input type="checkbox"><label for="">SANITARY PERMIT</label></li>
+        <li class ="check"><input type="checkbox"><label for="">FIRE PERMIT</label></li>
+        <li class ="check"><input type="checkbox"><label for="">CEDULA</label></li>
+        <li class ="check"><input type="checkbox"><label for="">APPLICATION FORM FOR BUSINESS UNIFIED PERMIT</label></li>
     </ul>
 
     <br> 
+    <p><i>*Fulfill these Requirements for a Hassle-free Business Permit Application Process.</i></p>
 </div>
 <?php
     }else {
 ?>
 <div class="container">
-        <h3>Business Requirements Checklist</h3><br>
+        <h3>Business Permit Requirements Checklist</h3>
+        <p>Ensure a Smooth Application Process with the Following Requirements. </p>
         
     <ul>
         <li><input type="checkbox" id="requirement1" <?php echo $requirement1_checked; ?>><label for="requirement1">2x2 PICTURE</label></li>
@@ -94,6 +100,7 @@ if ($checkbox_states) {
     </ul>
 
     <br> 
+    <p><i>*Fulfill these Requirements for a Hassle-free Business Permit Application Process.</i></p>
 
     <div class="row col-6">
         <button id="clearButton">Clear All</button>

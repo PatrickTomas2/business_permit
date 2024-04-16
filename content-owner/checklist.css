@@ -9,9 +9,7 @@ ul {
     list-style-type: none;
     padding: 0;
 }
-li {
-    margin-bottom: 10px;
-}
+
 input[type="checkbox"] {
     display: none;
 }
@@ -33,8 +31,8 @@ label::before {
     border-radius: 3px;
 }
 input[type="checkbox"]:checked + label::before {
-    background-color: var(--main-color);
-    border-color: var(--main-color);
+    background-color: #19a949;
+    border-color: #19a949;
 }
 input[type="checkbox"]:checked + label::after {
     content: '\2713';
