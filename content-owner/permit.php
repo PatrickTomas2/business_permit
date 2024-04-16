@@ -18,7 +18,7 @@
 
     $user_id = $_SESSION['user_id'];
     $username = $_SESSION['username'];
-    echo $user_id;
+    //echo $user_id;
 
 ?>
 
@@ -42,7 +42,7 @@
         if (mysqli_num_rows($select_user_info) > 0) {
             while ($row = mysqli_fetch_assoc($select_user_info)) {
                 $business_id = $row['business_id'];
-                echo $business_id;
+                //echo $business_id;
             }
         }
 ?>
