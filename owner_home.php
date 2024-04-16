@@ -61,6 +61,11 @@
                             <i class="fs-5 fa fa-file"></i><span class="fs-4 ms-3 d-none d-sm-inline">Apply for business permit</span>
                         </a>
                     </li>
+                    <li class="nav-item py-2 py-sm-0">
+                        <a href="#" class="nav-link text-black" onclick="renewPermit()">
+                            <i class="fs-5 fa fa-sync-alt"></i><span class="fs-4 ms-3 d-none d-sm-inline">Renewal for business permit</span>
+                        </a>
+                    </li>
                     <!-- <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white" onclick="showNotification()">
                             <i class="fs-5 fa fa-bell"></i><span class="fs-4 ms-3 d-none d-sm-inline">Notification</span>
