@@ -32,7 +32,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./sidemenu.css?ver=006">
     <script src="js/jquery-3.3.1.js?ver=001"></script>
-    <script src="js/owner_home_page.js?ver=002"></script>
+    <script src="js/owner_home_page.js?ver=003"></script>
     <title>Home page</title>
 </head>
 <body>

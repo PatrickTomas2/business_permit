@@ -18,6 +18,7 @@
 
     $user_id = $_SESSION['user_id'];
     $username = $_SESSION['username'];
+    echo $user_id;
 
 ?>
 
@@ -29,17 +30,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="js/jquery-3.3.1.js?ver=001"></script>
-    <script src="js/apply_permit.js?ver=005"></script>
+    <script src="js/apply_permit.js?ver=006"></script>
 </head>
 <body>
 <?php
     if ($message == "No active business") {
         echo "<p>Register your business first.</p>";
     }else {
+        
         $select_user_info = mysqli_query($conn, "SELECT * FROM owner_information INNER JOIN business_registration ON owner_information.owner_id = business_registration.owner_id WHERE owner_information.owner_id='$user_id' AND business_registration.business_name ='$user_business'");
         if (mysqli_num_rows($select_user_info) > 0) {
             while ($row = mysqli_fetch_assoc($select_user_info)) {
                 $business_id = $row['business_id'];
+                echo $business_id;
             }
         }
 ?>

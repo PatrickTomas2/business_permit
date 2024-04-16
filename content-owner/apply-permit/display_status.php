@@ -12,7 +12,7 @@
     ?>
     <div class="card">
         <div class="card-body">
-            <p>Your request for Business Permit is <span class="fw-bold text-danger">VERIFYING</span>.</p>
+            <p>Your request for a Business Permit is being <span class="fw-bold text-danger">verified</span>.</p>
             <p>Please exercise patience as you will be provided with the date to fulfill the requirement and obtain your business permit.</p>
         </div>
     </div>
@@ -22,7 +22,7 @@
     ?>
     <div class="card">
         <div class="card-body">
-        <p>Your business permit is <span class="fw-bold text-success">DONE</span>. Get your business permit tommorow on our office. Please bring all the documents and payment(₱1000).</p>
+        <p>Your business permit is <span class="fw-bold text-success">complete</span>. Get your business permit tomorrow at our office. Please bring all the documents and payment (₱1000).</p>
         </div>
     </div>
     <?php

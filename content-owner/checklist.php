@@ -51,8 +51,7 @@ if ($checkbox_states) {
     
     <title>Business Permit Requirements Checklist</title>
     <link rel="stylesheet" href="content-owner/checklist.css?ver=007">
-    <script src="js/jquery-3.3.1.js?ver001"></script>
-    <script src="js/checklist.js?ver=002"></script>
+    
 </head>
 </style>
 <body>
