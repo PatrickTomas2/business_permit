@@ -5,7 +5,7 @@ $(document).ready(function () {
 function switchActiveBusiness(business_name) {
     Swal.fire({
         icon: 'warning',
-        title: 'NAPALITAN TONG MESSAGE?',
+        title: 'Change active business?',
         text: 'By changing active business the input and information displayed will belong to the active business and will be redirected to the checklist page.',
         showCancelButton: true,
         confirmButtonText: 'YES',
