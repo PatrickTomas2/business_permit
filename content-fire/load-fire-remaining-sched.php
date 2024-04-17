@@ -19,7 +19,7 @@
 
 </head>
 <body>
-    <h4>Upcomming inspection schedule: </h4>
+    <h4>Upcoming inspection schedule: </h4>
     <br><br>
 <?php
     $query = "SELECT business_registration.business_name, fire_inspection_request.isAccepted, fire_inspection_request.inspection_schedule

@@ -72,7 +72,7 @@ function btnNextOne(){
     $('.login-credentials').show();
     $('.register-button-final').show();
 
-    $("#title-error-holder").text("Register account").css("color", "#FAD602");
+    $("#title-error-holder").text("Register account").css("color", "#rgb(6, 29, 66)");
 }
 
 // function btnNextTwo(){

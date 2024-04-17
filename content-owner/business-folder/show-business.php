@@ -30,15 +30,19 @@
     <script src="js/active_business.js"></script>
     <style>
         :root{
-            --main-color: #FAD602;
+            --main-color: #5BBCFF;
         }
         .custom-button-color{
             background-color: var(--main-color);
         }
-        .active-text{
+        .active-text {
             color: green;
-            margin-left: 20px;
+            text-align: center;
         }
+        .text-center {
+             text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -56,8 +60,8 @@
             if ($user_business == $business_name) {
 ?>
             <div class="card">
-                <div class="card-body custom-button-color">
-                    <button class="btn fw-bold fs-5" onclick="switchActiveBusiness('<?=$business_name?>')"><?=$business_name?> <span class="fw-bold fs-5 active-text">* Active</span></button>
+                <div class="card-body custom-button-color text-center">
+                    <button class="btn fw-bold fs-5  active-text" onclick="switchActiveBusiness('<?=$business_name?>')"><?=$business_name?> </button>
                 </div>
             </div>
             <br>

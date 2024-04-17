@@ -37,7 +37,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../sidemenu.css?ver=009">
+    <link rel="stylesheet" href="../sidemenu.css?ver=011">
     <script src="js/jquery-3.3.1.js?ver=001"></script>
     <script src="js/profile.js?ver=007"></script>
     <title>Profile</title>
@@ -86,7 +86,7 @@
             </div>
             <div class="col-md-4">
                 <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center experience"><span class="fs-5 fw-bold">Your business</span><span class="border px-3 p-1 add-experience"><a href="#" id="businessModalLink" data-bs-toggle="modal" data-bs-target="#businessModal" class="add-business-link"><i class="fa fa-plus"></i>&nbsp;Add Business</span></a></div><br>
+                    <div class="d-flex justify-content-between align-items-center experience"><span class="fs-5 fw-bold">Your business</span><span class="border px-3 p-1 add-experience"><a href="#" id="businessModalLink" data-bs-toggle="modal" data-bs-target="#businessModal" class="add-business-link"><i class="fa fa-plus"></i>&nbsp;<strong>Add Business</strong></span></a></div><br>
                     <div class="col-md-12 business-holder">
                     </div>
                     <br>

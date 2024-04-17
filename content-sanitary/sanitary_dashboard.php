@@ -123,7 +123,7 @@ $(document).ready(function() {
       data: {
         labels: ["November", "December", "January", "February", "March", "April"],
         datasets: [{
-            label: "Monhty Request",
+            label: "Monthly Request",
             data: [5, 7, 2, 4, 5, april],
             backgroundColor: [
               'rgba(105, 0, 132, .2)',

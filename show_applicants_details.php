@@ -49,7 +49,7 @@
                     2x2 picture
                 </h4>
                 <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
-                    <img src="<?php echo $req1; ?>" alt="Business Image">
+                    <img src="<?php echo $req1; ?>" alt="Business Image "style="width: 400px; height: 400px;">
                 </div>
                 <div class="d-flex justify-content-center mt-3">
                     <a href="download.php?file=<?php echo urlencode($req1); ?>" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600 fixed-size-btn">DOWNLOAD</a>
@@ -65,7 +65,7 @@
                     BRGY CLEARANCE FROM RESIDENCE
                 </h4>
                 <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
-                    <img src="<?php echo $req2; ?>" alt="Business Image">
+                    <img src="<?php echo $req2; ?>" alt="Business Image" style="width: 300px; height: 400px;">
                 </div>
                 <div class="d-flex justify-content-center mt-3">
                     <a href="download.php?file=<?php echo urlencode($req2); ?>" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600 fixed-size-btn">DOWNLOAD</a>
@@ -80,7 +80,7 @@
                     BRGY RECOMMENDATION
                 </h4>
                 <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
-                    <img src="<?php echo $req3; ?>" alt="Business Image">
+                    <img src="<?php echo $req3; ?>" alt="Business Image" style="width: 300px; height: 400px;">
                 </div>
                 <div class="d-flex justify-content-center mt-3">
                     <a href="download.php?file=<?php echo urlencode($req3); ?>" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600 fixed-size-btn">DOWNLOAD</a>
@@ -95,7 +95,7 @@
                     ZONING CERTIFICATE
                 </h4>
                 <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
-                    <img src="<?php echo $req; ?>" alt="Business Image">
+                    <img src="<?php echo $req; ?>" alt="Business Image" style="width: 300px; height: 400px;">
                 </div>
                 <div class="d-flex justify-content-center mt-3">
                     <a href="download.php?file=<?php echo urlencode($req4); ?>" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600 fixed-size-btn">DOWNLOAD</a>
@@ -110,7 +110,7 @@
                     SANITARY PERMIT
                 </h4>
                 <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
-                    <img src="<?php echo $req5; ?>" alt="Business Image">
+                    <img src="<?php echo $req5; ?>" alt="Business Image" style="width: 300px; height: 400px;">
                 </div>
                 <div class="d-flex justify-content-center mt-3">
                     <a href="download.php?file=<?php echo urlencode($req5); ?>" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600 fixed-size-btn">DOWNLOAD</a>
@@ -125,7 +125,7 @@
                     FIRE PERMIT
                 </h4>
                 <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
-                    <img src="<?php echo $req6; ?>" alt="Business Image">
+                    <img src="<?php echo $req6; ?>" alt="Business Image" style="width: 300px; height: 400px;">
                 </div>
                 <div class="d-flex justify-content-center mt-3">
                     <a href="download.php?file=<?php echo urlencode($req6); ?>" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600 fixed-size-btn">DOWNLOAD</a>
@@ -140,7 +140,7 @@
                     CEDULA
                 </h4>
                 <div class="d-flex justify-content-center"> <!-- Center the image horizontally -->
-                    <img src="<?php echo $req7; ?>" alt="Business Image">
+                    <img src="<?php echo $req7; ?>" alt="Business Image" style="width: 300px; height: 400px;">
                 </div>
                 <div class="d-flex justify-content-center mt-3">
                     <a href="download.php?file=<?php echo urlencode($req7); ?>" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600 fixed-size-btn">DOWNLOAD</a>

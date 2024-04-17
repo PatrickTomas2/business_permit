@@ -100,7 +100,7 @@
 
     .profile-button{
         width: 400px;
-        background-color: rgba(255, 255, 0, 0.5);
+        background-color: var(--main-color);
         color: black;
     }
 
@@ -112,11 +112,11 @@
     
     .add-business-link{
         text-decoration: none;
-        color: var(--main-color);
+        color: rgb(6, 29, 66);
     }
 
     .register-business-btn-custom{
-        background-color: rgba(255, 255, 0, 0.5);
+        background-color: var(--main-color);
         color: black;
     }
 
@@ -126,7 +126,7 @@
     }
 
     .logout-btn{
-        background-color: rgba(255, 255, 0, 0.5);
+        background-color: white;
         color: black;
     }
 

@@ -203,14 +203,14 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFive">
                         <button id="req5_btn" class="accordion-button custom-btn text-danger fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        SANITARY PERMIT<span id="req5_error" class="error"></span>
+                        SANITARY SAFETY INSPECTION PERMIT<span id="req5_error" class="error"></span>
                             <i class="bi bi-chevron-down ml-auto"></i> <!-- Bootstrap icon for toggling -->
                         </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="mb-3">
-                                <label for="req5" class="file_input">Upload sanitary permit </label>
+                                <label for="req5" class="file_input">Upload sanitary safety inspection permit </label>
                                 <input type="file" id="req5" name="req5" onchange="displayFileName(this, 'req5')" required>
                             </div>
                         </div>
@@ -237,14 +237,14 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingSeven">
                         <button id="req7_btn" class="accordion-button custom-btn text-danger fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            SANITARY SAFETY INSPECTION PERMIT<span id="req7_error" class="error"></span>
+                            CEDULA<span id="req7_error" class="error"></span>
                             <i class="bi bi-chevron-down ml-auto"></i> <!-- Bootstrap icon for toggling -->
                         </button>
                     </h2>
                     <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="mb-3">
-                                <label for="req7" class="file_input">Upload sanitary safety inspection permit</label>
+                                <label for="req7" class="file_input">Upload cedula</label>
                                 <input type="file" id="req7" name="req7" onchange="displayFileName(this, 'req7')" required>
                             </div>
                         </div>

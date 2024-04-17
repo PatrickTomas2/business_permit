@@ -132,8 +132,8 @@ function SubmitRequirement(business_id){
     form_data.append('req3', file_data3);
     form_data.append('req4', file_data4);
     form_data.append('req5', file_data5);
-    form_data.append('req7', file_data6);
-    form_data.append('req6', file_data7);
+    form_data.append('req6', file_data6);
+    form_data.append('req7', file_data7);
 
 
         // var formData = new FormData('#postForm');

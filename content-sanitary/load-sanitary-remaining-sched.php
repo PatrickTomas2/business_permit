@@ -19,7 +19,7 @@
 
 </head>
 <body>
-    <h4>Upcomming inspection schedule: </h4>
+    <h4>Upcoming inspection schedule: </h4>
     <br><br>
 <?php
     $query = "SELECT business_registration.business_name, sanitary_inspection_request.isAccepted, sanitary_inspection_request.inspection_schedule FROM business_registration INNER JOIN sanitary_inspection_request ON business_registration.business_id = sanitary_inspection_request.business_id WHERE sanitary_inspection_request.isAccepted = '1' AND DATE(sanitary_inspection_request.inspection_schedule) > CURDATE() ORDER BY sanitary_inspection_request.inspection_schedule ASC;";
